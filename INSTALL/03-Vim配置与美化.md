@@ -1,30 +1,20 @@
-## vim-instant-markdown
-> 参考教程：https://blog.csdn.net/Demorngel/article/details/69036044?utm_source=blogxgwz1
+## 安装Vim美化插件
+- vim-startity： https://github.com/mhinz/vim-startify
+- vim-airline： https://github.com/vim-airline/vim-airline
+- indentline： https://github.com/yggdroot/indentline
 
-- 安装
+配置vimrc文件：
 ```
-sudo apt-get install nodejs npm
-sudo npm -g install instant-markdown-d
+Plugin 'mhinz/vim-startify'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Yggdroot/indentLine'
 ```
-如果你不想自动打开预览窗口的话，你可以在/etc/vim/vimrc中写入:
+执行：
 ```
-let g:instant_markdown_autostart = 0
+:PluginInstall
 ```
-当你想要预览的时候，在vim的普通模式下输入
-```
-:InstantMarkdownPreview
-```
-当然也可以将上面的命令映射到其他键位，比如下面将其映射到F11
 
-> map \<F11\> :InstantMarkdownPreview\<CR\>
-
-## 模糊搜索器ctrlp
-> 参考文档：https://github.com/ctrlpvim/ctrlp.vim
-
-安装
-```
-Plugin 'ctrlpvim/ctrlp.vim'
-```
 ## 配置vimrc，实现自动补全与快捷映射
 ```
 set nu
@@ -40,13 +30,17 @@ inoremap < <><ESC>i
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 ```
+
+
 ## 安装Vundle
+
 > 官方教程：https://github.com/VundleVim/Vundle.vim
 
 克隆文件：
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
 配置vimrc文件：
 ```
 set nocompatible              " be iMproved, required
@@ -93,28 +87,40 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 ```
-执行：
-```
-:PluginInstall
-```
-## 安装Vim美化插件
-- vim-startity： https://github.com/mhinz/vim-startify
-- vim-airline： https://github.com/vim-airline/vim-airline
-- indentline： https://github.com/yggdroot/indentline
 
-配置vimrc文件：
-```
-Plugin 'mhinz/vim-startify'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Yggdroot/indentLine'
-```
 执行：
 ```
 :PluginInstall
 ```
 
+## vim-instant-markdown
+> 参考教程：https://github.com/suan/vim-instant-markdown
 
-## autojump、zsh-autosuggestion和zsh-syntax-highlighting
+1. 安装
+```
+sudo npm -g install instant-markdown-d]
+```
+2. Vundle
+```
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+```
+3. Minimal default configuration:
+```
+filetype plugin on
+"Uncomment to override defaults:
+"let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+"let g:instant_markdown_open_to_the_world = 1
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+"let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_autoscroll = 0
+"let g:instant_markdown_port = 8888
+"let g:instant_markdown_python = 1
+```
 
-> 参考文档：https://www.zrahh.com/archives/167.html
+4. 当然也可以将上面的命令映射到其他键位，比如下面将其映射到F11
+
+> map \<F11\> :InstantMarkdownPreview\<CR\>
+
