@@ -31,5 +31,13 @@ sudo snap install --classic webstorm
 sudo apt install nodejs npm
 sudo npm -g install instant-markdown-d
 ```
-## 安装rime输入法
+
+## Vim命令：ZZ
+关闭分屏（:vs/:sp）
+
+## abbreviations
+:iabbrev adn and 
+:iabbrev @@    steve@stevelosh.com
+:iabbrev ccopy Copyright 2013 Steve Losh, all rights reserved.
+
 

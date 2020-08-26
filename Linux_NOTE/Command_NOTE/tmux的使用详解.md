@@ -16,6 +16,7 @@ Tmux ("Terminal Multiplexer") 是一款优秀的终端复用软件，类似 GNU 
 ```bash
 tmux
 ```
+
 **2. 新建会话**
 ```bash
 tmux new -s name
@@ -26,19 +27,23 @@ tmux new -s name
 ```bash
 tmux ls
 ```
+
 **4. 进入一个已知会话**
 ```bash
 tmux -a -t name
 tmux attach -t name
 ```
+
 **5. 暂时离开当前会话**
 ```bash
 tmux detach
 ```
+
 **6. 关闭会话**
 ```bash
 tmux kill-session -t name
 ```
+
 **7. 水平分屏**
 
 快捷键：先按 ctrl+b, 放开后再按%
