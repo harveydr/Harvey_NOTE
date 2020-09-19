@@ -29,7 +29,4 @@ for li in lis:
             }
     movies.append(movie)
 print(movies)
-autocmd FileType python nnoremap <buffer> <c-d> dd
--f 
-adn adn 
 
